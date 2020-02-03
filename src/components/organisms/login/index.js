@@ -1,25 +1,61 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import classNames from 'classnames';
 import H from '../../atoms/h';
-
-
+import Field from '../../molecules/Field';
+import { useForm } from 'react-hook-form';
 import style from './style';
+import ErrorMessege from '../../atoms/ErrorMessege';
 
 const Wrapper = styled.div`
   ${style}
 `;
 
-class Login extends Component {
-  render() {
-    const Class = classNames('Login', this.props.className);
+const Login = () => {
+
+    const { handleSubmit, register, errors } = useForm();
+    const onSubmit = values => {
+      console.log(values);
+    };
     return (
-      <Wrapper className={Class}>
-          <H level={3}>{this.props.label}</H>
+      <Wrapper className='login'>
+          <div  className="login__box">
+              <form onSubmit={handleSubmit(onSubmit)}>
+
+                      <H>Login</H>
+                      <Field
+                        label="email"  kind="input">
+                        <input
+                          name="email"
+                          label="email"  type="text"
+                          ref={register({
+                            required: 'Required',
+                            pattern: {
+                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                              message: "invalid email address"
+                            }
+                          })}
+                          kind="input"
+                        />
+                      </Field>
+                      <Field
+                        label="password"  kind="input">
+                        <input
+                          name="password"
+                          type="password"
+                        />
+                    </Field>
+                      <H level={6}>
+                        <a href="/lost_password">missing your password?</a> 
+                      </H>
+                      {errors.email && <ErrorMessege>{errors.email.message }</ErrorMessege> }
+                      {errors.password && <ErrorMessege>{errors.password.message }</ErrorMessege> }
+
+                      <button className="btn btn__primary" type="submit">Submit</button>
+            </form>
+          </div>
       </Wrapper>
     );
-  }
 }
 
 Login.propTypes = {

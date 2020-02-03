@@ -14,4 +14,7 @@ export default createGlobalStyle`
         font-size: 1.5rem;
         line-height: 2;
     }
+   *{
+    box-sizing: border-box;
+   }
 `;

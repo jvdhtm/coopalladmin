@@ -20,6 +20,10 @@ const theme = {
     ],
   };
   
+  theme.background ={
+    primary: '#ffa520',
+    secondary: '#484848',
+  }
   theme.fonts = {
     primary: 'Arial',
     pre: 'Courier, monospace',

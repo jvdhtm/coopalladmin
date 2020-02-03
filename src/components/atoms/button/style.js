@@ -16,7 +16,6 @@ const style = css`
         : props.theme.buttonPadding
         ? props.theme.buttonPadding
         : '1rem 2rem'};
-    border-radius: 30rem;
     box-sizing: border-box;
 
     transition: background-color 250ms ease-out, color 250ms ease-out,

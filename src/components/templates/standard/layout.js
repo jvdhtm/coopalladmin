@@ -13,6 +13,7 @@ import { ThemeProvider } from 'styled-components';
 import Header from "../../organisms/header/header"
 import theme from '../../themes/default';
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,7 +28,6 @@ const Layout = ({ children }) => {
   return (
     <>
     <ThemeProvider theme={theme}>
-      {theme}
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{

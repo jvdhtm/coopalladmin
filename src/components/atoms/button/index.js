@@ -31,7 +31,7 @@ const className = `btn btn__${variant}`
 
 Button.propTypes = {
   type: PropTypes.string,
-  variant: PropTypes.oneOf(['default', 'primary', 'secondary', 'warning']),
+  variant: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.any,
   href: PropTypes.string
