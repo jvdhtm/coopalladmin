@@ -10,13 +10,28 @@ const style = css`
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    background:${props => props.theme.background.primary};
-                    padding: ${props => props.theme.baseSpace * 4}px ${props =>  props.theme.baseSpace * 5}px;
+                    background:${props => props.theme.white};
                     border-radius:10%;
                     width:300px;
+
+                    .field {
+                        border-bottom: thin solid gray;
+                    }
                 }
                 &__body{
                     text-align:left;
+                    padding: ${props => props.theme.baseSpace * 4}px ${props =>  props.theme.baseSpace * 5}px;
+                }
+                &__header{
+                    .logo{
+                        width: 80px;
+                        top: 10px;
+                        right: 10px;
+                        position: absolute ;
+                    }
+                    h1{
+                        padding: 0px ${props =>  props.theme.baseSpace * 5}px;
+                    }
                 }
 
 
@@ -39,7 +54,7 @@ const style = css`
                     ? props.theme.buttonPadding
                     : '1rem 2rem'};
                 box-sizing: border-box;
-
+                min-width:  ${props => props.theme.btn.minWidth};;
                 transition: background-color 250ms ease-out, color 250ms ease-out,
                 border-color 250ms ease-out;
                 &__primary {

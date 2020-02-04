@@ -6,6 +6,7 @@ const style = css`
     position: relative;
     text-align: center;
     margin-bottom: 10px;
+    background: white;
     label {
         color: #757575;
         font-size: 12px;
@@ -13,7 +14,7 @@ const style = css`
         position: absolute;
         pointer-events: none;
         left: 15px;
-        top: 10px;
+        top: 13px;
         transition: 0.2s ease all;
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
@@ -59,8 +60,8 @@ const style = css`
 
     }
     input{
-        padding: 10px 15px;
-        height: 40px;
+        padding: 0px 15px;
+        height: 50px;
         border: none;
         max-width: 100%;
         border-radius: 0px;
@@ -119,7 +120,12 @@ const style = css`
         
 
     }
+    .icon{
 
+        position:absolute;
+        top:13px;
+        right:10px;
+    }
 }
 }
 `;

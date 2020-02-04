@@ -6,6 +6,7 @@ import Field from '../../molecules/Field';
 import { useForm } from 'react-hook-form';
 import style from './style';
 import ErrorMessege from '../../atoms/ErrorMessege';
+import Logo from '../../atoms/Logo';
 
 const Wrapper = styled.div`
   ${style}
@@ -22,7 +23,11 @@ const Login = () => {
           <div  className="login__box">
               <form onSubmit={handleSubmit(onSubmit)}>
 
-                      <H>Login</H>
+                      <div className="login__header">
+                        <Logo></Logo>
+                        <H>Login</H>
+                      </div>
+                      <div className="login__body">
                       <Field icon="user"
                         label="email"  kind="input">
                         <input
@@ -52,6 +57,7 @@ const Login = () => {
                       {errors.password && <ErrorMessege>{errors.password.message }</ErrorMessege> }
 
                       <button className="btn btn__primary" type="submit">Submit</button>
+                      </div>
             </form>
           </div>
       </Wrapper>

@@ -18,7 +18,7 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
       fieldClass = classNames('field', fieldClassProp);
     if (kind === 'select') {
 
-      return  <Wrapper className="field">
+      return  <Wrapper >
               <div className={fieldClass}>
                   {label  ? <label>{label}</label> : null}
                   {children}
@@ -28,7 +28,7 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
               </Wrapper>
   
     } else if (kind === 'textarea') {
-      return  <Wrapper className="field">
+      return  <Wrapper >
               <div className={fieldClass}>
               {children}
                 {label  ? <label>{label}</label> : null}
@@ -41,7 +41,7 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
 
     else if (kind === 'checkbox' || kind === '"radiobox"'){
       fieldClass = classNames('field field__box', fieldClassProp);
-     return <Wrapper className="field">
+     return <Wrapper >
               <div className={fieldClass}>
               {children}
                 <span className="checkmark"></span>
@@ -52,7 +52,7 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
            </Wrapper>
     }
     else{
-          return <Wrapper className="field">
+          return <Wrapper >
                   <div className={fieldClass}>
                       {children}
                       {label  ? <label>{label}</label> : null}

@@ -2,34 +2,24 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Header = ({ siteTitle, navigation }) => { 
+  return(
+    <header class="header">
+        <button type="button" class="d-lg-none navbar-toggler" data-sidebar-toggler="true">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <button type="button" class="d-md-down-none navbar-toggler" data-sidebar-toggler="true">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul>
+            <li><a class="nav-link active" href="#/dashboard" aria-current="page">Dashboard</a></li>
+            <li><a class="nav-link" href="#/users">Users</a></li>
+            <li><a class="nav-link" href="#/dashboard">Settings</a></li>
+        </ul>
+        <button type="button" class="d-md-down-none navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    </header>
 )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

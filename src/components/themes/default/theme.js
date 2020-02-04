@@ -1,10 +1,10 @@
 const theme = {
-    primary: '#1976d2',
-    secondary: '#c2185b',
-    danger: '#c2185b',  
-    default: '#616161',
-    warning: '#c2185b',
-    success: '#c2185b',
+    primary: '#8d8741',
+    secondary: '#659dbd',
+    danger: '#daad86',  
+    default: '#bc986a',
+    warning: '#f13c20',
+    success: '#edc7b7',
     white: 'white',
     black: 'black',
     baseSpace: 8,
@@ -35,6 +35,11 @@ const theme = {
     color: '#393939',
   };
   
+  theme.btn = {
+    minWidth: '140px',
+    height: '60px',
+  };
+
   theme.paragraph = {
     color: '#676767',
   };

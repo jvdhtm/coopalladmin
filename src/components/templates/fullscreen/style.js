@@ -1,5 +1,6 @@
 import { css } from 'styled-components';
 
+
 const style = css`
   &.fullscreen{
     min-height:100vh;
