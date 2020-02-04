@@ -23,7 +23,7 @@ const Login = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
 
                       <H>Login</H>
-                      <Field
+                      <Field icon="user"
                         label="email"  kind="input">
                         <input
                           name="email"
@@ -39,7 +39,7 @@ const Login = () => {
                         />
                       </Field>
                       <Field
-                        label="password"  kind="input">
+                        label="password"  kind="input" icon="key">
                         <input
                           name="password"
                           type="password"

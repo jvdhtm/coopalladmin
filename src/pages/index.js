@@ -5,10 +5,12 @@ import Layout from "../components/templates/fullscreen"
 import SEO from "../components/atoms/seo/seo"
 import Login from "../components/organisms/login/"
 import Globalcss from "../../src/components/themes/default/global"
+import SVGLibrary from '../../src/components/atoms/SVGLibrary';
 
 const IndexPage = () => (
   <>
   <Globalcss/>
+  <SVGLibrary/>
   <Layout>
     <SEO title="Home" />
     <Login></Login>

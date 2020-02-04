@@ -13,11 +13,11 @@ const Wrapper = styled.div`
 
 const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kind ,type ,icon ,placeholder, iconclass,change ,label, value , ...props  }) => {
 
-      var Class ;
+
       var fieldClass ;
       fieldClass = classNames('field', fieldClassProp);
     if (kind === 'select') {
-       Class = classNames('field__select', className);
+
       return  <Wrapper className="field">
               <div className={fieldClass}>
                   {label  ? <label>{label}</label> : null}
@@ -28,7 +28,6 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
               </Wrapper>
   
     } else if (kind === 'textarea') {
-       Class = classNames('field__textarea', className);
       return  <Wrapper className="field">
               <div className={fieldClass}>
               {children}
@@ -41,7 +40,6 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
     }
 
     else if (kind === 'checkbox' || kind === '"radiobox"'){
-      Class = classNames('field__check', className);
       fieldClass = classNames('field field__box', fieldClassProp);
      return <Wrapper className="field">
               <div className={fieldClass}>
@@ -54,7 +52,6 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
            </Wrapper>
     }
     else{
-         Class = classNames('field__input', className);
           return <Wrapper className="field">
                   <div className={fieldClass}>
                       {children}

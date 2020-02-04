@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const IconTag = ({ icon ,className ,...props }) => {
     const Class = classNames('icon', className);
     return  <svg className={`${Class} icon-${icon}`}>
-                <use xlinkHref={`#${icon}`} />
+                <use href={`#${icon}`} />
             </svg>           
 }
   

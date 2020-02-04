@@ -11,8 +11,9 @@ const style = css`
                     left: 50%;
                     transform: translate(-50%, -50%);
                     background:${props => props.theme.background.primary};
-                    padding: ${props => props.theme.baseSpace * 4}px ${props =>  props.theme.baseSpace * 10}px;
+                    padding: ${props => props.theme.baseSpace * 4}px ${props =>  props.theme.baseSpace * 5}px;
                     border-radius:10%;
+                    width:300px;
                 }
                 &__body{
                     text-align:left;
