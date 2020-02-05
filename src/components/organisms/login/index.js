@@ -22,7 +22,6 @@ const Login = () => {
       <Wrapper className='login'>
           <div  className="login__box">
               <form onSubmit={handleSubmit(onSubmit)}>
-
                       <div className="login__header">
                         <Logo></Logo>
                         <H>Login</H>
