@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import H from '../../atoms/h';
-import Field from '../../molecules/Field';
+import Field from '../../molecules/field';
 import { useForm } from 'react-hook-form';
 import style from './style';
 import ErrorMessege from '../../atoms/ErrorMessege';
-import Logo from '../../atoms/Logo';
+import Logo from '../../atoms/logo';
+
 
 const Wrapper = styled.div`
   ${style}
 `;
 
 const Login = () => {
-
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = values => {
       console.log(values);
@@ -48,13 +48,12 @@ const Login = () => {
                           name="password"
                           type="password"
                         />
-                    </Field>
+                      </Field>
                       <H level={6}>
                         <a href="/lost_password">missing your password?</a> 
                       </H>
                       {errors.email && <ErrorMessege>{errors.email.message }</ErrorMessege> }
                       {errors.password && <ErrorMessege>{errors.password.message }</ErrorMessege> }
-
                       <button className="btn btn__primary" type="submit">Submit</button>
                       </div>
             </form>

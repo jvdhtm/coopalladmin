@@ -25,7 +25,7 @@ const Block = ({ title ,children ,className ,...props }) => {
             
 }
 
-paragraph.propTypes = {
+Block.propTypes = {
     children: PropTypes.any,
     title: PropTypes.string,
     className: PropTypes.string,

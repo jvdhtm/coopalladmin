@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
 import H from '../../atoms/h';
 import selecticon from '../../../media/svg/select.svg';
-
 import style from './style';
 
 const Wrapper = styled.div`
   ${style}
 `;
-
 class ToggleBox extends Component {
   state = {
     shown: false,
