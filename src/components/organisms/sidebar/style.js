@@ -12,6 +12,7 @@ const style = css`
         background-color:${props =>  props.theme.black};
         color:${props =>  props.theme.white};
         width: 260px;
+        padding: 20px;
         &__body{
             text-align:left;
         }

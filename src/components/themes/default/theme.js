@@ -6,7 +6,7 @@ const theme = {
     warning: '#f13c20',
     success: '#edc7b7',
     white: 'white',
-    black: 'black',
+    black: '#222d32',
     baseSpace: 8,
     grayscale: [
       '#212121',

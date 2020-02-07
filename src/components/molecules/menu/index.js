@@ -10,16 +10,9 @@ const Wrapper = styled.div`
 `;
 
 const Menu =({items})=> {
-
-  console.log(items)
-
-
-
-
     return <Wrapper>
             <ListTag className="menu">
             { items.map((item, i) => { 
-                console.log(item);
                   return <li>
                             { item.url ? <Link to={item.url}>{item.title}</Link>:<span>{item.title}</span>}
                             <Menu items={item.children}/>

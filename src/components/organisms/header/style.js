@@ -15,7 +15,9 @@ const style = css`
         display:none;
     }
     &__container{
-        display:block;
+        display: flex;
+        justify-content: left;
+        align-self: center;
         width:calc(100% - 90px);
         position:relative;
         ul{

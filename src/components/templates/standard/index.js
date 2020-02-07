@@ -65,14 +65,12 @@ const Standard = ({ children }) => {
     return children;
   }
   createMenuTree(items,recursiveitems,-1);
-
-  console.log(items);
   return (
     <>
     <ThemeProvider theme={theme}>
       <Wrapper className="standard"  >
           <Header/>
-          <Sidebar items={recursiveitems}/>
+          <Sidebar items={recursiveitems} title="main navigation"/>
           <main className="main">
             {children}
           </main>

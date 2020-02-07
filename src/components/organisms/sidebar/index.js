@@ -8,6 +8,7 @@ import classNames from 'classnames';
 import H from '../../atoms/h';
 import Paragraph from '../../atoms/paragraph';
 import Menu from '../../molecules/menu';
+import Search from '../../molecules/search';
 import { Link } from "gatsby"
 
 const Wrapper = styled.div`
@@ -19,13 +20,12 @@ const Wrapper = styled.div`
 
 
 const SideBar = ({ title, paragraph, items, className, ...props }) => {
-
     const Class = classNames('sidebar', className);
     return  <Wrapper>
                 <div className={Class}>
-                    { title ? <H level="1">{title}</H>:""}
-                    { paragraph ? <Paragraph level="1">{paragraph}</Paragraph>:""}
-                    <Link to="/page-2/">Go to page 2</Link>
+                    <Search></Search>
+                    { title ? <H level="3">{title}</H>:""}
+                    { paragraph ? <Paragraph>{paragraph}</Paragraph>:""}
                     <div className="sidebar__body">
                         {items.length > 0 ? <Menu items = {items}></Menu>:""}
                     </div>  
