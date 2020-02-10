@@ -2,14 +2,14 @@
     {
         "pageID":1,
         "title":"Page",
-        "icon":"library",
+        "icon":"document-add",
         "link":"",
         "parentID" :-1
     },
     {
         "pageID":2,
         "title":"Blog",
-        "icon":"layers",
+        "icon":"compose",
         "link":"",
         "parentID" :-1
     },
@@ -30,23 +30,37 @@
     {
         "pageID":5,
         "title":"settings",
+        "icon":"dial-pad",
         "link":"",
         "parentID" : -1
     },
     {
         "pageID":6,
         "title":"General",
-        "icon":"camera",
+        "icon":"cog",
         "link":"",
         "parentID" : 5
     },
     {
         "pageID":7,
         "title":"Blog",
-        "icon":"camera",
+        "icon":"compose",
+        "link":"",
+        "parentID" : 5
+    },    
+    {
+        "pageID":8,
+        "title":"Language",
+        "icon":"map",
+        "link":"",
+        "parentID" : 5
+    },    
+    {
+        "pageID":9,
+        "title":"Dashboard",
+        "icon":"library",
         "link":"",
         "parentID" : 5
     }    
-
     
 ]

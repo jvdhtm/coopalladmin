@@ -1,10 +1,9 @@
 import { css } from 'styled-components';
 
 const style = css`
-  .menu {
+    &.card-columns {
 
-    
-  }
- 
+    }
 `;
+
 export default style;

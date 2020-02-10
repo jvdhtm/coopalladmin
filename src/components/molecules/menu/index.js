@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import style from './style';
 import PropTypes from 'prop-types';
 import ListTag from '../../atoms/list';
+import Icon from '../../atoms/icon';
 import { Link } from "gatsby"
 
 const Wrapper = styled.div`
@@ -10,19 +11,23 @@ const Wrapper = styled.div`
 `;
 
 const Menu =({items})=> {
-
-  console.log(items)
-
-
-
-
     return <Wrapper>
             <ListTag className="menu">
             { items.map((item, i) => { 
-                console.log(item);
-                  return <li>
-                            { item.url ? <Link to={item.url}>{item.title}</Link>:<span>{item.title}</span>}
-                            <Menu items={item.children}/>
+                  return <li key={i}>
+                            { item.link ? 
+                            <Link to={item.link} className={ 
+                              item.active  ? "active":""
+                              }>{item.title}</Link>:
+                              <span className={
+                                item.active  ? "active":""
+                              }>{item.title}</span>}
+                            { item.icon ? <Icon  icon={item.icon} ></Icon> : ""}
+                            {
+                              item.children.length > 0  ?  <Menu items={item.children}/>:""}
+                            
+                            { item.children.length > 0  ? <Icon   icon="cheveron-right" ></Icon> : ""}
+                           
                         </li>
                         
                 })

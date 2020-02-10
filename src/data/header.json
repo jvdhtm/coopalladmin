@@ -1,0 +1,25 @@
+[
+    {
+        "pageID":1,
+        "title":"Dashboard",
+        "icon":"",
+        "link":"dashboard",
+        "parentID" :-1
+    },
+    {
+        "pageID":2,
+        "title":"Accounts",
+        "icon":"",
+        "link":"",
+        "parentID" :-1
+    },
+    {
+        "pageID":3,
+        "title":"Users",
+        "icon":"",
+        "link":"",
+        "parentID" :-1
+    }
+
+    
+]

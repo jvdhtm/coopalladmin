@@ -7,16 +7,18 @@ const style = css`
     min-width:100vw;
     display:flex;
     border-bottom: 1px solid ${props =>  props.theme.grayscale[5] };
+    
     &__logo{
         display:block;
-        width: 90px;
+        width: 60px;
     }
     &__button{
         display:none;
     }
     &__container{
-        display:block;
-        width:calc(100% - 90px);
+        display: flex;
+        align-items: center;
+        width:calc(100% - 60px);
         position:relative;
         ul{
             display:flex;
@@ -39,7 +41,6 @@ const style = css`
     &__profile{
         position:absolute;
         right:10px;
-        top:10px;
         background-color: transparent;
         border: 1px solid transparent;
     }
