@@ -86,10 +86,12 @@ const data = useStaticQuery(graphql`
     <>
     <ThemeProvider theme={theme}>
       <Wrapper className="standard"  >
-          <Header items={recursiveitemsHeader} />
-          <Sidebar items={recursiveitems}/>
+          <Header  items={recursiveitemsHeader} />
           <main className="main">
-            {children}
+            <Sidebar items={recursiveitems}/>
+            <div className="content">
+              {children}
+            </div>
           </main>
        </Wrapper> 
       </ThemeProvider>

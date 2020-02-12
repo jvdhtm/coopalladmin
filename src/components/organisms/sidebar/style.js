@@ -1,19 +1,20 @@
 import { css } from 'styled-components';
 
 const style = css`
-&{
-    .sidebar {
+&.sidebar{
         bottom: 0;
         float: none;
         height: 100vh;
-        left: 0;
+        left: 0px;
         position: fixed;
         top: 52px;
         background-color:${props =>  props.theme.black};
         color:${props =>  props.theme.white};
-        width: 260px;
-        &__body{
-            text-align:left;
+       z-index:1;
+        .sidebar {
+            &__body{
+                text-align:left;
+            }
         }
         .menu{
             background-color:${props =>  props.theme.black};
@@ -57,7 +58,7 @@ const style = css`
                 }
             }
         }
-    }
+    
 }
 `;
 

@@ -3,7 +3,7 @@
         "pageID":1,
         "title":"Dashboard",
         "icon":"",
-        "link":"dashboard",
+        "link":"/",
         "parentID" :-1
     },
     {

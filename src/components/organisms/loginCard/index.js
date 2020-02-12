@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const Login = () => {
+const LoginCard = () => {
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = values => {
       console.log(values);
@@ -62,8 +62,8 @@ const Login = () => {
     );
 }
 
-Login.propTypes = {
+LoginCard.propTypes = {
   label: PropTypes.string,
 };
 
-export default Login;
+export default LoginCard;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import style from './style';
 import PropTypes from 'prop-types';
-
+import classNames from 'classnames';
 
 
 
@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 `;
 
 const CardHeader = ({  children ,className ,...props }) => {
-
     const Class = classNames('card-header', className);
     return  <Wrapper className={Class}>
                         {children}
@@ -25,4 +24,4 @@ CardHeader.propTypes = {
 };
 
 
-export default Card;
+export default CardHeader;

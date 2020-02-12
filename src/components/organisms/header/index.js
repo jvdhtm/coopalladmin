@@ -7,16 +7,15 @@ import Menu from '../../molecules/menu';
 import style from './style';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   ${style}
 `;
 
 
-const Header = ({ items }) => { 
+const Header = ({ items,className }) => { 
   return(
-    <Wrapper >
-    <header className="header">
-      <Link className="header__logo" to="/admin/">
+    <Wrapper  className="header">
+      <Link className="header__logo" to="/">
         <Logo></Logo>
       </Link>
       <div className="header__container">
@@ -30,7 +29,6 @@ const Header = ({ items }) => {
             <Icon icon="user"></Icon>
           </button>
         </div>
-    </header>
     </Wrapper>
 )
 }

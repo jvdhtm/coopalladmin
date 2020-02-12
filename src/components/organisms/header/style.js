@@ -2,12 +2,11 @@ import { css } from 'styled-components';
 
 
 const style = css`
-&{
-  .header{
+&.header{
     min-width:100vw;
     display:flex;
     border-bottom: 1px solid ${props =>  props.theme.grayscale[5] };
-    
+  .header{
     &__logo{
         display:block;
         width: 60px;

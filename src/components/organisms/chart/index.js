@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import style from './style';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 
 // Components
+import { Bar, Doughnut, Line, Pie, Polar, Radar } from 'react-chartjs-2';
 import H from '../../atoms/h';
-import Paragraph from '../../atoms/paragraph';
-import Card from '../../molecules/card';
-import { Bar, Doughnut, Line, Pie, Polar, Radar } from 'react-chartjs-2';.
+import  Card from '../../molecules/card';
+import  CardBody from '../../molecules/cardBody';
+import  Grids from '../../molecules/grids';
+import  CardHeader from '../../molecules/cardHeader';
 
 
 const Wrapper = styled.div`
@@ -155,14 +158,107 @@ const line = {
     ],
   };
 
+  const options = {}
 const Chart = ({ title ,children ,className ,...props }) => {
 
-    const Class = classNames('block', className);
+    const Class = classNames('chart', className);
     return  <Wrapper className={Class}>
                     { title ? <H level="1">{title}</H>:""}
-                    <Paragraph className="block__body">
-                        {children}
-                    </Paragraph>   
+                    <div className="chart__body">
+                      <Grids className="flexrow">
+                        <Card className="col-6">
+                          <CardHeader>
+                            Line Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Line data={line} options={options} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                        <Card className="col-6">
+                          <CardHeader>
+                            Bar Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Bar data={bar} options={options} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                        <Card className="col-6">
+                          <CardHeader>
+                            Doughnut Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Doughnut data={doughnut} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                        <Card className="col-6">
+                          <CardHeader>
+                            Radar Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Radar data={radar} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                        <Card className="col-6">
+                          <CardHeader>
+                            Pie Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Pie data={pie} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                        <Card className="col-6">
+                          <CardHeader>
+                            Polar Area Chart
+                            <div className="card-header-actions">
+                              <a href="http://www.chartjs.org" className="card-header-action">
+                                <small className="text-muted">docs</small>
+                              </a>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="chart-wrapper">
+                              <Polar data={polar} options={options}/>
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Grids>
+                
+                    </div>   
             </Wrapper> 
             
 }
