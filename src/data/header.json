@@ -10,7 +10,7 @@
         "pageID":2,
         "title":"Accounts",
         "icon":"",
-        "link":"",
+        "link":"/account",
         "parentID" :-1
     },
     {

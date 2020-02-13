@@ -33,14 +33,16 @@ const newAccount = () => {
     Name: namor.generate({ words: 1, numbers: 0 }),
     credit: Math.floor(Math.random() * 100),
     progress: Math.floor(Math.random() * 100),
-    status:
+    status:  
       statusChance > 0.60
-        ? 'active'
+        ? <span className="active">Active</span>
         : statusChance > 0.40
-        ? 'confirming'
-        :  statusChance > 0.20 ? 'archived' : 'halt',
+        ? <span className="confirming" >confirming</span>
+        :  statusChance > 0.20 ? <span className="archived" >archived</span> : <span className="halt">halt</span>,
   }
 }
+
+
 
 const range = len => {
   const arr = []
