@@ -25,9 +25,14 @@ const Header = ({ items,className }) => {
           <div className="header__navigation">
               {items.length > 0 ? <Menu items = {items}></Menu>:""}
           </div>
-          <button type="button" className="header__profile" >
+          <div className="header__profile">
+          <button type="button" className="header__notifications" >
+            <Icon icon="notification"></Icon>
+          </button>
+          <button type="button"  className="header__user" >
             <Icon icon="user"></Icon>
           </button>
+          </div>
         </div>
     </Wrapper>
 )

@@ -9,7 +9,10 @@ const style = css`
   .header{
     &__logo{
         display:block;
-        width: 60px;
+        width: 40px;
+        position: relative;
+        top:5px;
+        left:10px;
     }
     &__button{
         display:none;
@@ -19,6 +22,7 @@ const style = css`
         align-items: center;
         width:calc(100% - 60px);
         position:relative;
+        padding-left: 20px;
         ul{
             display:flex;
             list-style: none;
@@ -37,11 +41,15 @@ const style = css`
             }
         }
     }
+  
     &__profile{
         position:absolute;
         right:10px;
+
+        button{
         background-color: transparent;
         border: 1px solid transparent;
+        }
     }
   }
 }

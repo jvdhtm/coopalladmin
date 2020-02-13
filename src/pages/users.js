@@ -3,23 +3,22 @@ import Standard from "../components/templates/standard"
 import SEO from "../components/atoms/seo/seo"
 import Globalcss from "../components/themes/default/global"
 import SVGLibrary from "../components/atoms/SVGLibrary"
-import AccountsCard from "../components/organisms/accountsCard"
+import UsersCard from "../components/organisms/usersCard"
 import namor from 'namor'
 
 
 var columns =  [
   {
-    Header: "Name /Company Name",
-    accessor: "Name"
+    Header: "First name",
+    accessor: "FirstName"
   },
   {
-    Header: "Credit",
-    accessor: "credit"
-  }
-  ,
+    Header: "Last name",
+    accessor: "LastName"
+  },
   {
-    Header: "Progress",
-    accessor: "progress"
+    Header: "Account",
+    accessor: "account"
   }
   ,
   {
@@ -27,12 +26,12 @@ var columns =  [
     accessor: "status"
   }
 ]
-const newAccount = () => {
+const newPerson = () => {
   const statusChance = Math.random()
   return {
-    Name: namor.generate({ words: 1, numbers: 0 }),
-    credit: Math.floor(Math.random() * 100),
-    progress: <span>%{Math.floor(Math.random() * 100)}</span>,
+    FirstName: namor.generate({ words: 1, numbers: 0 }),
+    LastName: namor.generate({ words: 1, numbers: 0 }),
+    account:  namor.generate({ words: 1, numbers: 0 }),
     status:  
       statusChance > 0.60
         ? <span className="active">Active</span>
@@ -56,7 +55,7 @@ function makeData(...lens) {
   const makeDataLevel = (depth = 0) => {
     const len = lens[depth]
     return range(len).map(d => {
-      return newAccount()
+      return newPerson()
     })
   }
 
@@ -64,16 +63,16 @@ function makeData(...lens) {
 }
 const data = makeData(20);
 console.log(data);
-const Accounts = () => (
+const Users = () => (
   <>
   <Globalcss/>
   <SVGLibrary></SVGLibrary>
   <Standard active="Accounts">
     <SEO title="Accounts" />
-    <AccountsCard items={data} columns={columns} ></AccountsCard>
+    <UsersCard items={data} columns={columns} ></UsersCard>
   </Standard>
   </>
 )
 
-export default Accounts
+export default Users
 

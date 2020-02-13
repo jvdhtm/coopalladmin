@@ -17,7 +17,7 @@
         "pageID":3,
         "title":"Users",
         "icon":"",
-        "link":"",
+        "link":"/users",
         "parentID" :-1
     }
 
