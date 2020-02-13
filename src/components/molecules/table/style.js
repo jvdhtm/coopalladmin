@@ -3,29 +3,27 @@ import { css } from 'styled-components';
 const style = css`
     &.table {
         padding: 1rem;
-        table {
-        border-spacing: 0;
-        border: 1px solid black;
-
-        tr {
-            :last-child {
-            td {
-                border-bottom: 0;
+        table { 
+            width: 750px; 
+            border-collapse: collapse; 
+            margin:50px auto;
+	    }
+        /* Zebra striping */
+        tr:nth-of-type(odd) { 
+            background: ${props => props.theme.grayscale[5]}; 
             }
-            }
-        }
 
-        th,
-        td {
-            margin: 0;
-            padding: 0.5rem;
-            border-bottom: 1px solid black;
-            border-right: 1px solid black;
-
-            :last-child {
-            border-right: 0;
+        th { 
+            background: ${props => props.theme.secondary}; 
+            color: white; 
+            font-weight: bold; 
             }
-        }
+
+        td, th { 
+            padding: 10px; 
+            border: 1px solid ${props => props.theme.grayscale[4]}; 
+            text-align: left; 
+            font-size: 18px;
         }
     }
 `;

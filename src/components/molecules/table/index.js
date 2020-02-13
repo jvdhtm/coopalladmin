@@ -11,9 +11,6 @@ const Wrapper = styled.div`
 `;
 const Table = ({ columns, data, className  ,...props }) => {
     const Class = classNames('table', className);
-    console.log(columns);
-    console.log(data);
-
     const {
         getTableProps,
         getTableBodyProps,
