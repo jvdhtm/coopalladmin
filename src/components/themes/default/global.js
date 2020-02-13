@@ -18,4 +18,8 @@ export default createGlobalStyle`
    *{
     box-sizing: border-box;
    }
+   a{
+       color:${theme.white};
+       cursor: pointer;
+   }
 `;

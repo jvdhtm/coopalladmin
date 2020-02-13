@@ -1,10 +1,9 @@
 import { css } from 'styled-components';
 
 const style = css`
-  .menu {
-
-    
-  }
- 
+    &.accounts {
+        
+    }
 `;
+
 export default style;

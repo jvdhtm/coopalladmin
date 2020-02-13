@@ -2,23 +2,22 @@ import { css } from 'styled-components';
 
 
 const style = css`
-&{
-  .header{
+&.header{
     min-width:100vw;
     display:flex;
     border-bottom: 1px solid ${props =>  props.theme.grayscale[5] };
+  .header{
     &__logo{
         display:block;
-        width: 90px;
+        width: 60px;
     }
     &__button{
         display:none;
     }
     &__container{
         display: flex;
-        justify-content: left;
-        align-self: center;
-        width:calc(100% - 90px);
+        align-items: center;
+        width:calc(100% - 60px);
         position:relative;
         ul{
             display:flex;
@@ -41,7 +40,6 @@ const style = css`
     &__profile{
         position:absolute;
         right:10px;
-        top:10px;
         background-color: transparent;
         border: 1px solid transparent;
     }

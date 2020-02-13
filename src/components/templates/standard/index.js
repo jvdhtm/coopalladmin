@@ -21,13 +21,24 @@ const Wrapper = styled.div`
 
 
 
-const Standard = ({ children }) => {
+const Standard = ({ children, active }) => {
 
-  const data = useStaticQuery(graphql`
+const data = useStaticQuery(graphql`
   query SiteTitleQuery {
     site {
       siteMetadata {
         title
+      }
+    }
+    allHeaderJson {
+      edges {
+        node {
+          pageID
+          title
+          icon 
+          link
+          parentID
+        }
       }
     }
     allSidebarJson {
@@ -45,9 +56,11 @@ const Standard = ({ children }) => {
   `)
 
 
-  var items = data.allSidebarJson.edges;
 
+  var items = data.allSidebarJson.edges;
+  var headeritems = data.allHeaderJson.edges;
   var recursiveitems = [];
+  var recursiveitemsHeader = [];
 
   function createMenuTree(items,recursiveitems,parentid){
     var children = [];
@@ -57,7 +70,10 @@ const Standard = ({ children }) => {
         if(item.node.parentID == parentid ){
           recursiveitems[count] = item.node;
           children[count] = item.node;
-          recursiveitems[count].children = createMenuTree(items,recursiveitems,item.node.pageID);
+           // eslint-disable-next-line
+          active == item.node.title ?  recursiveitems[count].active = 1:recursiveitems[count].active =  null
+          recursiveitems[count].children= []
+          createMenuTree(items,recursiveitems[count].children,item.node.pageID);
           count++;
           //
         }
@@ -65,14 +81,17 @@ const Standard = ({ children }) => {
     return children;
   }
   createMenuTree(items,recursiveitems,-1);
+  createMenuTree(headeritems,recursiveitemsHeader,-1);
   return (
     <>
     <ThemeProvider theme={theme}>
       <Wrapper className="standard"  >
-          <Header/>
-          <Sidebar items={recursiveitems} title="main navigation"/>
+          <Header  items={recursiveitemsHeader} />
           <main className="main">
-            {children}
+            <Sidebar items={recursiveitems}/>
+            <div className="content">
+              {children}
+            </div>
           </main>
        </Wrapper> 
       </ThemeProvider>

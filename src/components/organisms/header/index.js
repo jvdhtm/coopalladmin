@@ -3,38 +3,32 @@ import PropTypes from "prop-types"
 import React from "react"
 import Icon from '../../atoms/icon';
 import Logo from '../../atoms/logo';
-import ListTag from '../../atoms/list';
+import Menu from '../../molecules/menu';
 import style from './style';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   ${style}
 `;
 
 
-const Header = ({  navigation }) => { 
+const Header = ({ items,className }) => { 
   return(
-    <Wrapper >
-    <header className="header">
-      <Link className="header__logo" to="/admin/">
+    <Wrapper  className="header">
+      <Link className="header__logo" to="/">
         <Logo></Logo>
       </Link>
       <div className="header__container">
           <button type="button" className="header__button" >
             <Icon icon="list"></Icon>
           </button>
-          <ListTag className="header__navigation">
-              <li><Link to="/admin/">Admin</Link></li>
-              <li><Link to="/dashboard/">Dashboard</Link></li>
-              <li><Link to="/accounts/">Accounts</Link></li>
-              <li><Link to="/users/">Users</Link></li>
-              <li><Link to="/roles/">Users</Link></li>
-          </ListTag>
+          <div className="header__navigation">
+              {items.length > 0 ? <Menu items = {items}></Menu>:""}
+          </div>
           <button type="button" className="header__profile" >
             <Icon icon="user"></Icon>
           </button>
         </div>
-    </header>
     </Wrapper>
 )
 }
