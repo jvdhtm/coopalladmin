@@ -16,7 +16,7 @@
     {
         "pageID":2,
         "title":"Form",
-        "icon":"form",
+        "icon":"window-new",
         "link":"",
         "parentID" :-1
     },

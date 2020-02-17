@@ -13,17 +13,17 @@ const style = css`
     }
 
     main{
-      position:relative;
-      max-height:calc(100vh - 52px);
-      overflow:auto;
-      display:flex;
-      flex-direction: row-reverse;
+        position:relative;
+        max-height:calc(100vh - 52px);
+        overflow:auto;
+        display:flex;
+        flex-direction: row-reverse;
       .sidebar{
-      width: 260px;
+        width: 260px;
       }
       .content{
         width:calc(100% - 260px);
-        padding:40px;
+        padding:40px;  
       }
     }
   }

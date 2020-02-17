@@ -10,12 +10,12 @@ import classNames from 'classnames';
 import H from '../../atoms/h';
 
 
-const Wrapper = styled.table`
+const Wrapper = styled.div`
   ${style}
 `;
 
 const UsersCard = ({ items, columns ,className ,...props }) => {
-    const Class = classNames('users', className);
+    const Class = classNames('users-card', className);
 
     return  <Wrapper className={Class}>
                 <Table columns={columns} data={items} />

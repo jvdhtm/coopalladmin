@@ -3,7 +3,7 @@ import Standard from "../components/templates/standard"
 import SEO from "../components/atoms/seo/seo"
 import Globalcss from "../components/themes/default/global"
 import SVGLibrary from "../components/atoms/SVGLibrary"
-import AccountsCard from "../components/organisms/accountsCard"
+import AccountsCard from "../components/molecules/accountsCard"
 import Icon from "../components/atoms/icon"
 import namor from 'namor'
 
@@ -69,13 +69,12 @@ function makeData(...lens) {
   return makeDataLevel()
 }
 const data = makeData(20);
-console.log(data);
 const Accounts = () => (
   <>
   <Globalcss/>
   <SVGLibrary></SVGLibrary>
   <Standard active="Accounts">
-    <SEO title="Accounts" />
+    <SEO title="Accounts"  />
     <AccountsCard items={data} columns={columns} ></AccountsCard>
   </Standard>
   </>
