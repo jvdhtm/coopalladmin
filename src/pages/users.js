@@ -3,11 +3,16 @@ import Standard from "../components/templates/standard"
 import SEO from "../components/atoms/seo/seo"
 import Globalcss from "../components/themes/default/global"
 import SVGLibrary from "../components/atoms/SVGLibrary"
-import UsersCard from "../components/organisms/usersCard"
+import UsersCard from "../components/organisms/usersCards"
+import Icon from "../components/atoms/icon"
 import namor from 'namor'
 
 
 var columns =  [
+  {
+    Header: "Edit",
+    accessor: "Edit"
+  },
   {
     Header: "First name",
     accessor: "FirstName"
@@ -29,6 +34,7 @@ var columns =  [
 const newPerson = () => {
   const statusChance = Math.random()
   return {
+    Edit:<span><Icon icon="edit-pencil" /><Icon icon="trash" /></span>,
     FirstName: namor.generate({ words: 1, numbers: 0 }),
     LastName: namor.generate({ words: 1, numbers: 0 }),
     account:  namor.generate({ words: 1, numbers: 0 }),

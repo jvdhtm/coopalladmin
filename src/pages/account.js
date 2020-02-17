@@ -4,10 +4,15 @@ import SEO from "../components/atoms/seo/seo"
 import Globalcss from "../components/themes/default/global"
 import SVGLibrary from "../components/atoms/SVGLibrary"
 import AccountsCard from "../components/organisms/accountsCard"
+import Icon from "../components/atoms/icon"
 import namor from 'namor'
 
 
 var columns =  [
+  {
+    Header: "Edit",
+    accessor: "Edit"
+  },
   {
     Header: "Name /Company Name",
     accessor: "Name"
@@ -30,6 +35,7 @@ var columns =  [
 const newAccount = () => {
   const statusChance = Math.random()
   return {
+    Edit:<span><Icon icon="edit-pencil" /><Icon icon="trash" /></span>,
     Name: namor.generate({ words: 1, numbers: 0 }),
     credit: Math.floor(Math.random() * 100),
     progress: <span>%{Math.floor(Math.random() * 100)}</span>,

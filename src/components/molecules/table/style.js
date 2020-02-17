@@ -25,6 +25,10 @@ const style = css`
             text-align: left; 
             font-size: 18px;
         }
+        .icon{
+            margin-left: 10px;
+        }
+
     }
 `;
 
