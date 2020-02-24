@@ -1,0 +1,23 @@
+[
+    {
+        "pageID":1,
+        "title":"Dashboard",
+        "name":"Dashboard",
+        "path":"/",
+        "status":true
+    },
+    {
+        "pageID":2,
+        "title":"Accounts",
+        "name":"Accounts",
+        "path":"/account",
+        "status":true
+    },
+    {
+        "pageID":3,
+        "title":"Users",
+        "name":"Users",
+        "path":"/users",
+        "status":false
+    }
+]
