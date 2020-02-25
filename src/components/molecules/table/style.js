@@ -7,17 +7,15 @@ const style = css`
             border-collapse: collapse; 
             margin:50px auto;
 	    }
-        /* Zebra striping */
         tr:nth-of-type(odd) { 
             background: ${props => props.theme.grayscale[5]}; 
-            }
+         }
 
         th { 
             background: ${props => props.theme.secondary}; 
             color: white; 
             font-weight: bold; 
-            }
-
+        }
         td, th { 
             padding: 10px; 
             border: 1px solid ${props => props.theme.grayscale[4]}; 
