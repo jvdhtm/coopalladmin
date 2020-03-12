@@ -47,14 +47,12 @@ const Pages = () => {
 
 
 pagelists.allPagesJson.edges.forEach(function (item, key) {
-    console.log(item.node.status);
     data[key] = {
+        ... item.node,
         edit:<span><Icon icon="edit-pencil" /><Icon icon="trash" /></span>,
-        status: item.node.status  ? <span className="active">Active</span> : <span className="deactive" >deactive</span>,
-        ... item.node
+        status: item.node.status === true  ? <span className="active">Active</span> : <span className="deactive" >deactive</span>,  
     };
 });
-console.log(data);
  return(
   <>
   <Globalcss/>
