@@ -22,6 +22,9 @@ const theme = {
     ],
   };
   
+  theme.animate ={
+    second: '0.3'
+  }
   theme.background ={
     primary: '#ffa520',
     secondary: '#484848',

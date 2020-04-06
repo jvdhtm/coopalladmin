@@ -48,7 +48,7 @@ const Pages = () => {
 
 pagelists.allPagesJson.edges.forEach(function (item, key) {
     data[key] = {
-        ... item.node,
+        ...item.node,
         edit:<span><Icon icon="edit-pencil" /><Icon icon="trash" /></span>,
         status: item.node.status === true  ? <span className="active">Active</span> : <span className="deactive" >deactive</span>,  
     };

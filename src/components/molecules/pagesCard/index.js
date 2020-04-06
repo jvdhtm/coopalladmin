@@ -7,7 +7,6 @@ import classNames from 'classnames';
 
 
 // Components
-import H from '../../atoms/h';
 
 
 const Wrapper = styled.table`

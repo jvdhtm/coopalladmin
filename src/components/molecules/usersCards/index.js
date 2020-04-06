@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 
 // Components
-import H from '../../atoms/h';
+
 
 
 const Wrapper = styled.div`
@@ -22,7 +22,6 @@ const UsersCard = ({ items, columns ,className ,...props }) => {
             </Wrapper> 
             
 }
-
 UsersCard.propTypes = {
     items: PropTypes.array,
     className: PropTypes.string,

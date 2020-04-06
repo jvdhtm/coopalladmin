@@ -36,14 +36,13 @@ const style = css`
                         top:0px;
                         right:0%;
                         width:100%;
-                        transition: all 1s ease;
+                        transition: all ${props =>  props.theme.animate.second} ease;
                         z-index:-1;
                         height:auto;
                    }
 
             }
         }
-
         .icon{
             fill:${props =>  props.theme.primary};
             position: absolute;

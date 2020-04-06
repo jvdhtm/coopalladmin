@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const UserCard = ({}) => {
+const UserCard = () => {
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = values => {
       console.log(values);
@@ -50,10 +50,8 @@ const UserCard = ({}) => {
                           kind="input"
                         />
                       </Field>
-
                       {errors.path && errors.path.type === 'required' && <ErrorMessege>This is required</ErrorMessege>}
                       {errors.title && errors.title.type === 'required' && <ErrorMessege>This is required</ErrorMessege>}
-
                       <button className="btn btn__primary" type="submit">Create</button>
                       </div>
             </form>
