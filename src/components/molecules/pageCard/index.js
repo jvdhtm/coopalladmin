@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const UserCard = ({itemActive}) => {
+const UserCard = ({}) => {
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = values => {
       console.log(values);
@@ -23,47 +23,38 @@ const UserCard = ({itemActive}) => {
           <div  className="page-card__box">
               <form onSubmit={handleSubmit(onSubmit)}>
                       <div className="page-card__header">
-                        <H>Edit user</H>
+                        <H>Create page</H>
                       </div>
                       <div className="page-card__body">
-                      <Field icon="document"
+                      <Field 
                         label="Title"  kind="input">
-                        <input className="notempty"
+                        <input 
                           name="title"
                           type="text"
                           ref={register({
-                            required: 'Required',
-                            pattern: {
-                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                              message: "invalid email address"
-                            }
+                            required: 'Required'
                           })}
                           kind="input"
-                          value={itemActive.title}
+                          
                         />
                       </Field>
 
-                      <Field icon="document"
-                        label="Title"  kind="input">
-                        <input className="notempty"
-                          name="title"
+                      <Field 
+                        label="Path"  kind="input">
+                        <input
+                          name="path"
                           type="text"
                           ref={register({
                             required: 'Required',
-                            pattern: {
-                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                              message: "invalid email address"
-                            }
                           })}
                           kind="input"
-                          value={itemActive.title}
                         />
                       </Field>
 
+                      {errors.path && errors.path.type === 'required' && <ErrorMessege>This is required</ErrorMessege>}
                       {errors.title && errors.title.type === 'required' && <ErrorMessege>This is required</ErrorMessege>}
-                      
 
-                      <button className="btn btn__primary" type="submit">Submit</button>
+                      <button className="btn btn__primary" type="submit">Create</button>
                       </div>
             </form>
           </div>

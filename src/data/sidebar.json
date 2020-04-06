@@ -3,7 +3,7 @@
         "pageID":1,
         "title":"Page",
         "icon":"document-add",
-        "link":"",
+        "link":"/page",
         "parentID" :-1
     },
     {

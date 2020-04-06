@@ -3,7 +3,7 @@ import Standard from "../components/templates/standard"
 import SEO from "../components/atoms/seo/seo"
 import Globalcss from "../components/themes/default/global"
 import SVGLibrary from "../components/atoms/SVGLibrary"
-import PagesCard from "../components/molecules/pagesCard"
+import PagesAdmin from "../components/organisms/pagesAdmin"
 import { useStaticQuery, graphql } from "gatsby"
 import Icon from "../components/atoms/icon"
 
@@ -57,9 +57,9 @@ pagelists.allPagesJson.edges.forEach(function (item, key) {
   <>
   <Globalcss/>
   <SVGLibrary></SVGLibrary>
-  <Standard active="Accounts">
-    <SEO title="Accounts"/>
-    <PagesCard items={data} columns={columns} ></PagesCard>
+  <Standard active="Page">
+    <SEO title="Page"/>
+    <PagesAdmin items={data} columns={columns} ></PagesAdmin>
   </Standard>
   </>
 )}

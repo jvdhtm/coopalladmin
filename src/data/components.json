@@ -1,0 +1,32 @@
+[
+    {
+        "componentID":1,
+        "title":"textBlock",
+        "name":"textBlock",
+        "details": [
+            {
+             "obj":"string",
+             "name":"name",
+             "default": "title"
+            },
+            {
+                "obj":"bigString",
+                "name":"describtion",
+                "default": "Old unsatiable our now but considered travelling impression. In excuse hardly summer in basket misery."
+            }
+        ],
+        "status":true
+    },
+    {
+        "componentID":2,
+        "title":"imageBlock",
+        "name":"imageBlock",
+        "status":true
+    },
+    {
+        "componentID":3,
+        "title":"Gallery",
+        "name":"gallery",
+        "status":false
+    }
+]

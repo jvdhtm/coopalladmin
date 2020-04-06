@@ -16,7 +16,6 @@ const Wrapper = styled.table`
 
 const pagesCard = ({ items, columns ,className ,...props }) => {
     const Class = classNames('pages', className);
-
     return  <Wrapper className={Class}>
                 <Table columns={columns} data={items} />
             </Wrapper> 

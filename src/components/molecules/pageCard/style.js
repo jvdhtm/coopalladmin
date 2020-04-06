@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 const style = css`
 &{
 
-    .user-card {
+    .page-card {
                 &__box{
                     
                     .field {
