@@ -15,7 +15,7 @@ const Wrapper = styled.table`
 `;
 
 const AccountsCard = ({ items, columns ,className ,...props }) => {
-    const Class = classNames('accounts', className);
+    const Class = classNames('accounts-card', className);
 
     return  <Wrapper className={Class}>
                 <Table columns={columns} data={items} />

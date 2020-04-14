@@ -1,0 +1,26 @@
+[
+    {
+        "typeID":1,
+        "title":"Int",
+        "name":"int",
+        "status":true
+    },
+    {
+        "typeID":2,
+        "title":"Big Int",
+        "name":"bigint",
+        "status":false
+    },
+    {
+        "typeID":3,
+        "title":"Float",
+        "name":"float",
+        "status":false
+    },
+    {
+        "typeID":4,
+        "title":"String",
+        "name":"string",
+        "status":false
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "accountID":1,
+        "title":"account1",
+        "credit":62,
+        "progress":-25,
+        "status":"active"
+    },
+    {
+        "accountID":2,
+        "title":"account2",
+        "credit":62,
+        "progress":-25,
+        "status":"archived"
+    },
+    {
+        "accountID":3,
+        "title":"account3",
+        "credit":62,
+        "progress":25,
+        "status":"confirming"
+    },
+    {
+        "accountID":4,
+        "title":"account4",
+        "credit":62,
+        "progress":-25,
+        "status":"halt"
+    }
+]

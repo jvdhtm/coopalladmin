@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
 const style = css`
-    &.accounts {
+    &.accounts-card {
         .active{
             color:${props => props.theme.success};
         }

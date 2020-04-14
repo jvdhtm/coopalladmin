@@ -17,7 +17,6 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
       var fieldClass ;
       fieldClass = classNames('field', fieldClassProp);
     if (kind === 'select') {
-
       return  <Wrapper >
               <div className={fieldClass}>
                   {label  ? <label>{label}</label> : null}
@@ -39,19 +38,23 @@ const Field = ({ className,fieldClassProp, children ,errorMessege , options ,kin
               </Wrapper>
     }
 
-    else if (kind === 'checkbox' || kind === '"radiobox"'){
+    else if (kind === 'checkbox' || kind === 'radiobox'){
       fieldClass = classNames('field field__box', fieldClassProp);
      return <Wrapper >
               <div className={fieldClass}>
               {children}
-                <span className="checkmark"></span>
+                <span className="checkmark">
+
+                  { icon ? <Icon  icon={icon} className={iconclass}></Icon> : ""}
+                </span>
                 {label  ? <label>{label}</label> : null}
-                { icon ? <Icon  icon={icon} className={iconclass}></Icon> : ""}
+
                 { errorMessege ? <ErrorMessege>{errorMessege}</ErrorMessege> : ''}
             </div>
            </Wrapper>
     }
     else{
+      fieldClass = classNames('field field__input', fieldClassProp);
           return <Wrapper >
                   <div className={fieldClass}>
                       {children}

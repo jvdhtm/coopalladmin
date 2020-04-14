@@ -23,7 +23,7 @@ const theme = {
   };
   
   theme.animate ={
-    second: '0.3'
+    second: '0.3s'
   }
   theme.background ={
     primary: '#ffa520',

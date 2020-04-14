@@ -7,6 +7,9 @@ const style = css`
     text-align: center;
     margin-bottom: 10px;
     background: white;
+    &__input{
+        border-bottom: thin solid  ${props => props.theme.grayscale[2]};
+    
     label {
         color: #757575;
         font-size: 12px;
@@ -19,8 +22,30 @@ const style = css`
         -moz-transition: 0.2s ease all;
         -webkit-transition: 0.2s ease all;
         opacity: 1;
-    }
+        }
+        input{
+            padding: 0px 15px;
+            height: 50px;
+            border: none;
+            max-width: 100%;
+            border-radius: 0px;
 
+            &:focus {
+                outline: none;
+            }
+            &:focus~label {
+                top: 2px;
+                font-size: 10px;
+                color: #757575;
+            }
+            &.notempty~label {
+                top: 2px;
+                font-size: 10px;
+                color: #757575;
+                opacity: 0;
+            }
+        }
+    }
     input:not([type='submit']){
         width: 100%;
     }
@@ -32,55 +57,27 @@ const style = css`
             position: relative;
             top:0px;
             left:25px;
-            font-family: $silka;
+            font-family: ${props => props.theme.fonts};
             font-size: 12px;
             color:$black;
         }
         .checkmark {
             position: absolute;
-            top: 6px;
+            top: 13px;
             left: 0;
             height: 15px;
             width: 15px;
-            background-color:$white;
-            border: solid 1px $black;
-            &:before{
-                font-family: icons !important;
-                font-style: normal;
-                font-weight: normal !important;
-                font-variant: normal;
-                text-transform: none;
-                line-height: 1;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                content: "\f131";
-                display: none;
+            background-color: ${props => props.theme.white};
+            border: solid 1px ${props => props.theme.black};
+            .icon{
+                display:none;
+                width:10px;
+                height:10px;
             }
         }
 
     }
-    input{
-        padding: 0px 15px;
-        height: 50px;
-        border: none;
-        max-width: 100%;
-        border-radius: 0px;
 
-        &:focus {
-            outline: none;
-        }
-        &:focus~label {
-            top: 2px;
-            font-size: 10px;
-            color: #757575;
-        }
-        &.notempty~label {
-            top: 2px;
-            font-size: 10px;
-            color: #757575;
-            opacity: 0;
-        }
-    }
 
     input[type="search"] {
         box-shadow: none;
@@ -94,7 +91,7 @@ const style = css`
         width:100%;
         z-index: 1;
         &:checked ~.checkmark {
-            &:before{
+            .icon{
                 display: block;
             }
 
@@ -121,10 +118,8 @@ const style = css`
 
     }
     .icon{
-
-        position:absolute;
-        top:13px;
-        right:10px;
+        position:relative;
+        left:1px;
     }
 }
 }

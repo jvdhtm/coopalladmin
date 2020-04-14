@@ -1,0 +1,46 @@
+[
+    {
+        "userID":1,
+        "accountID":2,
+        "account":"hippi",
+        "firstName":"john",
+        "lastName":"doe",
+        "password":"somepassword",
+        "email":"john.doe@company.com",
+        "status":"halt"
+
+    },
+    {
+        "userID":2,
+        "accountID":2,
+        "account":"hippi",
+        "firstName":"john",
+        "lastName":"doe",
+        "password":"somepassword",
+        "email":"john.doe@company.com",
+        "status":"active"
+
+    },
+    {
+        "userID":3,
+        "accountID":2,
+        "account":"hippi",
+        "firstName":"john",
+        "lastName":"doe",
+        "password":"somepassword",
+        "email":"john.doe@company.com",
+        "status":"active"
+
+    },
+    {
+        "userID":4,
+        "accountID":2,
+        "account":"hippi",
+        "firstName":"john",
+        "lastName":"doe",
+        "password":"somepassword",
+        "email":"john.doe@company.com",
+        "status":"active"
+
+    }
+]

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const User = ({ items,itemActive, columns ,className ,...props }) => {
+const UserAdmin = ({ items,itemActive, columns ,className ,...props }) => {
     const Class = classNames('user', className);
     console.log(itemActive);
     return  <Wrapper className={Class}>
@@ -24,11 +24,11 @@ const User = ({ items,itemActive, columns ,className ,...props }) => {
             
 }
 
-User.propTypes = {
+UserAdmin.propTypes = {
     items: PropTypes.array,
     className: PropTypes.string,
 };
 
 
 
-export default User;
+export default UserAdmin;
