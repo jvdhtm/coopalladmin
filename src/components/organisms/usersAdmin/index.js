@@ -17,7 +17,7 @@ const UserAdmin = ({ items,itemActive, columns ,className ,...props }) => {
     const Class = classNames('user', className);
     console.log(itemActive);
     return  <Wrapper className={Class}>
-      {itemActive ? <UserCard  itemActive={itemActive}></UserCard>:""}
+        {itemActive ? <UserCard  itemActive={itemActive}></UserCard>:""}
                 <UsersCard items={items} columns={columns} ></UsersCard>
                 
             </Wrapper> 

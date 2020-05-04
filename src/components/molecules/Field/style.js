@@ -76,9 +76,7 @@ const style = css`
             }
         }
 
-    }
-
-
+    }dsad wdc c§§E 2
     input[type="search"] {
         box-shadow: none;
         border: 1px solid #a0a0a0;
