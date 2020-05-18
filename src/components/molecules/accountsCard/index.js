@@ -10,7 +10,7 @@ import classNames from 'classnames';
 
 
 
-const Wrapper = styled.table`
+const Wrapper = styled.div`
   ${style}
 `;
 

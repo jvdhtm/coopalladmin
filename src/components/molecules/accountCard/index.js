@@ -13,10 +13,8 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const AccountCard = ({itemActive,changeStatus}) => {
+const AccountCard = ({itemActive,changeStatus,changeCredit, changeName,onSubmit}) => {
     const { handleSubmit, errors } = useForm();
-    const onSubmit = values => {
-    };
     return (
       <Wrapper className='account-card'>
           <div  className="account-card__box">
@@ -29,7 +27,8 @@ const AccountCard = ({itemActive,changeStatus}) => {
                         label="name"  kind="input">
                         <input  className="notempty"
                           type="text" name="name"
-                          value={itemActive.name}
+                          value={itemActive.title}
+                          onChange={ changeName }
                         />
                       </Field>
                       <Field icon=""
@@ -37,7 +36,7 @@ const AccountCard = ({itemActive,changeStatus}) => {
                         <input  className="notempty"
                           type="number"
                           value={itemActive.credit}
-                          onChange={ changeStatus }
+                          onChange={ changeCredit }
                         />
                       </Field>
                       <div  className="account-card__status" >

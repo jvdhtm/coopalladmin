@@ -23,19 +23,31 @@ class AccountAdmin extends React.Component {
     }
   }
   changeActiveAccountStatus(event){
-
     var changeActiveItem = this.state.itemActive;
     changeActiveItem.statusOrg = event.target.value;
     this.setState({itemActive:changeActiveItem});
 
   }
+  changeCredit(event){
+    var changeActiveItem = this.state.itemActive;
+    changeActiveItem.credit = event.target.value;
+    this.setState({itemActive:changeActiveItem});
+  }
+  changeName(event){
+    var changeActiveItem = this.state.itemActive;
+    changeActiveItem.title = event.target.value;
+    this.setState({itemActive:changeActiveItem});
+  }
   componentWillReceiveProps(props) {
     this.setState({itemActive:props.itemActive,columns:props.columns,items:props.items});
+  }
+  onSubmit(){
+
   }
   render() {
     const Class = classNames('account', this.props.className);
     return  <Wrapper className={Class}>
-                { this.state.itemActive ? <AccountCard  itemActive={this.state.itemActive} changeStatus={this.changeActiveAccountStatus.bind(this)}></AccountCard> :""}
+                { this.state.itemActive ? <AccountCard onSubmit={this.onSubmit.bind(this)} changeCredit={this.changeCredit.bind(this)} changeName={this.changeName.bind(this)} itemActive={this.state.itemActive} changeStatus={this.changeActiveAccountStatus.bind(this)}></AccountCard> :""}
                 { this.state.items ? <AccountsCard items={this.state.items} columns={this.state.columns} ></AccountsCard>:""}
             </Wrapper> 
     }

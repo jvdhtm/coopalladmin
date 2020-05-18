@@ -13,12 +13,10 @@ const Wrapper = styled.div`
   ${style}
 `;
 
-const UserCard = ({itemActive,label}) => {
+const UserCard = ({itemActive,changeEmail,changeFirstName,changeLastName,changePassword,changeStatus}) => {
     const { handleSubmit, register, errors } = useForm();
     const onSubmit = values => {
-      console.log(values);
     };
-   console.log(itemActive);
     return (
       <Wrapper className='user-card'>
           <div  className="user-card__box">
@@ -41,6 +39,7 @@ const UserCard = ({itemActive,label}) => {
                           })}
                           kind="input"
                           value={itemActive.email}
+                          onChange={ changeEmail }
                         />
                       </Field>
                       <Field icon=""
@@ -56,6 +55,7 @@ const UserCard = ({itemActive,label}) => {
                           })}
                           kind="input"
                           value={itemActive.firstName}
+                          onChange={ changeFirstName }
                         />
                       </Field>
                       <Field icon=""
@@ -71,8 +71,48 @@ const UserCard = ({itemActive,label}) => {
                           })}
                           kind="input"
                           value={itemActive.lastName}
+                          onChange={ changeLastName }
                         />
                       </Field>
+                      <div  className="user-card__status" >
+                        <H level={5}>Status</H>
+                        <Field icon="checkmark" type="radio"
+                          label="active"  kind="radiobox">
+                          <input  className="notempty"
+                            type="radio" name="status"
+                            value="active"
+                            checked={itemActive.statusOrg === "active"}
+                            onChange={ changeStatus }
+                          />
+                        </Field>
+                        <Field icon="checkmark" type="radio"
+                          label="archived"  kind="radiobox">
+                          <input  className="notempty"
+                            type="radio" name="status"
+                            value="archived"
+                            checked={itemActive.statusOrg === "archived"}
+                            onChange={ changeStatus }
+                          />
+                        </Field>
+                        <Field icon="checkmark" type="radio"
+                          label="confirming"  kind="radiobox">
+                          <input  className="notempty"
+                            type="radio" name="status"
+                            value="confirming"
+                            checked={itemActive.statusOrg === "confirming"}
+                            onChange={ changeStatus }
+                          />
+                        </Field>
+                        <Field icon="checkmark" type="radio"
+                          label="halt"  kind="radiobox">
+                          <input  className="notempty"
+                            type="radio" name="status"
+                            value="halt"
+                            checked={itemActive.statusOrg === "halt"}
+                            onChange={ changeStatus }
+                          />
+                        </Field>
+                      </div>
                       <Field
                         label="password"  kind="input" icon="key">
                         <input  className="notempty"
@@ -86,6 +126,7 @@ const UserCard = ({itemActive,label}) => {
                         <input
                           name="Confirmpassword"
                           type="password"
+                          onChange={ changePassword }
                         />
                       </Field>
                       {errors.email && <ErrorMessege>{errors.email.message }</ErrorMessege> }

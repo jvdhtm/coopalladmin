@@ -9,7 +9,7 @@ import classNames from 'classnames';
 // Components
 
 
-const Wrapper = styled.table`
+const Wrapper = styled.div`
   ${style}
 `;
 

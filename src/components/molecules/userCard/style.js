@@ -4,11 +4,11 @@ const style = css`
 &{
 
     .user-card {
+                &__status{
+
+                }
                 &__box{
                     
-                    .field {
-                        border-bottom: thin solid gray;
-                    }
                 }
                 &__body{
                     text-align:left;
