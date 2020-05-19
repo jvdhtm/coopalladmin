@@ -119,6 +119,7 @@ const UserCard = ({itemActive,changeEmail,changeFirstName,changeLastName,changeP
                           name="password"
                           type="password"
                           value={itemActive.password}
+                          onChange={ changePassword }
                         />
                       </Field>
                       <Field
@@ -126,7 +127,6 @@ const UserCard = ({itemActive,changeEmail,changeFirstName,changeLastName,changeP
                         <input
                           name="Confirmpassword"
                           type="password"
-                          onChange={ changePassword }
                         />
                       </Field>
                       {errors.email && <ErrorMessege>{errors.email.message }</ErrorMessege> }

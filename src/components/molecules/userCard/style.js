@@ -8,7 +8,14 @@ const style = css`
 
                 }
                 &__box{
-                    
+                    .field__input {
+                        .icon{
+                            position: absolute;
+                            right: 1px;
+                            top: 20px;
+                            left:auto;
+                        }
+                    }
                 }
                 &__body{
                     text-align:left;

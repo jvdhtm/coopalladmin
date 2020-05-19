@@ -22,17 +22,25 @@ class UserAdmin extends React.Component {
         items:this.props.items
         }
     }
-    changeEmail(){
-        
+    changeEmail(event){
+        var changeActiveItem = this.state.itemActive;
+        changeActiveItem.email = event.target.value;
+        this.setState({itemActive:changeActiveItem});
     }
-    changeFirstName(){
-
+    changeFirstName(event){
+        var changeActiveItem = this.state.itemActive;
+        changeActiveItem.firstName = event.target.value;
+        this.setState({itemActive:changeActiveItem});
     }
-    changeLastName(){
-
+    changeLastName(event){
+        var changeActiveItem = this.state.itemActive;
+        changeActiveItem.lastName = event.target.value;
+        this.setState({itemActive:changeActiveItem});
     }
-    changePassword(){
-
+    changePassword(event){
+        var changeActiveItem = this.state.itemActive;
+        changeActiveItem.password = event.target.value;
+        this.setState({itemActive:changeActiveItem});
     }
     changeStatus(event){
         var changeActiveItem = this.state.itemActive;
@@ -43,7 +51,9 @@ class UserAdmin extends React.Component {
         this.setState({itemActive:props.itemActive,columns:props.columns,items:props.items});
     }
     render() {
-    return  <Wrapper className={this.props.Class}>
+        console.log(this.state.itemActive);
+    const Class = classNames('user', this.props.className);
+    return  <Wrapper className={Class}>
                 {this.state.itemActive ? <UserCard  itemActive={this.state.itemActive} changeStatus={this.changeStatus.bind(this)}  changeEmail={this.changeEmail.bind(this)} changeFirstName={this.changeFirstName.bind(this)} changeLastName={this.changeLastName.bind(this)} changePassword={this.changePassword.bind(this)} ></UserCard>:""}
                 {this.state.items ?  <UsersCard items={this.state.items} columns={this.state.columns} ></UsersCard>:""}
             </Wrapper> 
